@@ -10,13 +10,12 @@ import {
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 
-
+import ArticlesIndex from './components/articles/Index';
 
 import AuthLogin from './components/auth/Login';
 import AuthRegister from './components/auth/Register';
 
-// import SecureRoute from './components/common/SecureRoute';
-// import FlashMessages from './components/common/FlashMessages';
+
 
 import './scss/style.scss';
 
@@ -26,10 +25,11 @@ class App extends React.Component {
     return (
       <Router>
         <main>
-          {/* <Navbar/> */}
+          <Navbar/>
           <section className="section">
             <div className="container">
               <Switch>
+                <Route path="/articles" component={ArticlesIndex} />
                 <Route path="/login" component={AuthLogin} />
                 <Route path="/register" component={AuthRegister} />
                 <Route exact path="/" component={Home} />

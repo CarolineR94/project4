@@ -13,7 +13,10 @@ function indexRoute(req, res, next){
 function showRoute(req, res, next){
   Article
     .findById(req.params.id)
-    .then((article) => res.json(article))
+    .then(article => {
+      const translation = article.translations.find(translation => translation.language === req.params.language);
+      res.json(translation);
+    })
     .catch(next);
 }
 
