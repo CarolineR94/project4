@@ -29,7 +29,7 @@ class App extends React.Component {
           <section className="section">
             <div className="container">
               <Switch>
-                <Route path="/articles/:id/language" component={ArticlesShow} />
+                <Route path="/articles/:id/:language" component={ArticlesShow} />
                 <Route path="/articles" component={ArticlesIndex} />
                 <Route path="/login" component={AuthLogin} />
                 <Route path="/register" component={AuthRegister} />

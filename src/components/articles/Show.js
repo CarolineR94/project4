@@ -7,7 +7,7 @@ class ArticlesShow extends React.Component{
   state = {}
 
   componentDidMount(){
-    axios.get(`/api/articles/${this.props.match.params.id}/${this.state.language}`)
+    axios.get(`/api/articles/${this.props.match.params.id}/${this.props.match.params.language}`)
       .then(res => this.setState({ article: res.data }));
   }
 
