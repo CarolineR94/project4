@@ -7,10 +7,10 @@ import {
 } from 'react-router-dom';
 
 
-import Home from './components/Home';
 import Navbar from './components/Navbar';
 
 import ArticlesIndex from './components/articles/Index';
+import ArticlesShow from './components/articles/Show';
 
 import AuthLogin from './components/auth/Login';
 import AuthRegister from './components/auth/Register';
@@ -29,10 +29,10 @@ class App extends React.Component {
           <section className="section">
             <div className="container">
               <Switch>
+                <Route path="/articles/:id/language" component={ArticlesShow} />
                 <Route path="/articles" component={ArticlesIndex} />
                 <Route path="/login" component={AuthLogin} />
                 <Route path="/register" component={AuthRegister} />
-                <Route exact path="/" component={Home} />
               </Switch>
             </div>
           </section>
