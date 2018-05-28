@@ -1,10 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
+
 
 class ArticlesIndex extends React.Component{
   state = {
-    articles: []
+    articles: [],
+    search: '',
+    sort: 'language|asc'
   }
 
   componentDidMount(){
@@ -12,9 +16,11 @@ class ArticlesIndex extends React.Component{
       .then(res => this.setState({ articles: res.data }));
   }
 
+
   render(){
     return(
       <div>
+        <SearchBar/>
         <div className="columns is-multiline">
           {this.state.articles.map(article =>
             <div className="column is-one-third-desktop is-half-tablet" key={article._id}>

@@ -35,16 +35,17 @@ class ArticlesShow extends React.Component{
             <div className="card-content">
               <h1 className="title is-3">{article.title}</h1>
               <h2 className="subtitle is-5">{article.tagline}</h2>
-              <small>By {article.author} {article.createdAtRelative}</small>
+              <small><em>By {article.author}</em></small>
+              <small>{article.createdAtRelative}</small>
               <p className="show-page-article-content">{article.content}</p>
             </div>
           </div>
         </div>
         <div className="column is-2">
-          <ul>
-            <Link to={`/articles/${article._id}/${this.props.match.params.language}/edit`} className="button is-rounded">Edit</Link>
-            <button onClick={this.handleDelete} className="button is-rounded">Delete</button>
-            <Link to="" className="button is-rounded">Translate</Link>
+          <ul className="show-buttons">
+            <Link to={`/articles/${article._id}/${this.props.match.params.language}/edit`} className="button show-button"><i className="fas fa-lg fa-edit"></i></Link>
+            <button onClick={this.handleDelete} className="button show-button"><i className="far fa-lg fa-trash-alt"></i></button>
+            <Link to="" className="button show-button"><i className="fas fa-lg fa-globe"></i></Link>
             {/* {article.translatedInto.map(language =>
               <Link key={language} to={`/articles/${article._id}/${language}`}>
                 {language}
