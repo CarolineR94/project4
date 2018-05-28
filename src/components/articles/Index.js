@@ -28,14 +28,12 @@ class ArticlesIndex extends React.Component{
                     <div className="media-content">
                       <p className="title is-4 index-title">{article.translations[0].title}</p>
                       <p className="subtitle is-6 index-subtitle">{article.translations[0].tagline}</p>
-                      <small>{article.translations[0].author}</small>
-                      <small>{article.translations[0].createdAtRelative}</small>
                     </div>
                   </div>
 
 
                   {article.translatedInto.map(language =>
-                    <Link key={language} to={`/articles/${article._id}/${language}`}>
+                    <Link className="button is-rounded" key={language} to={`/articles/${article._id}/${language}`}>
                       {language}
                     </Link>
                   )}

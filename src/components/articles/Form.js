@@ -12,12 +12,6 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
       </div>
 
       <div className="field">
-        <label htmlFor="tagline">Tagline</label>
-        <input id="tagline" name="tagline" className="input" placeholder="Tagline" onChange={handleChange} value={article.tagline || ''} />
-        {errors.tagline && <small>{errors.tagline}</small>}
-      </div>
-
-      <div className="field">
         <label htmlFor="image">Image</label>
         <input id="image" name="image" className="input" placeholder="Image" onChange={handleChange} value={article.image || ''} />
         {errors.image && <small>{errors.image}</small>}
@@ -30,13 +24,33 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
       </div>
 
       <div className="field">
+        <label htmlFor="language">Language</label>
+        <div className="control">
+          <div className="select">
+            <select id="language" name="language" onChange={handleChange} value={article.language || ''}>
+              <option>Please select</option>
+              <option value="1">en</option>
+              <option value="2">fr</option>
+              <option value="3">it</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div className="field">
+        <label htmlFor="tagline">Tagline</label>
+        <input id="tagline" name="tagline" className="textarea" placeholder="Tagline" rows="10" onChange={handleChange} value={article.tagline || ''} />
+        {errors.tagline && <small>{errors.tagline}</small>}
+      </div>
+
+      <div className="field">
         <label htmlFor="content">Content</label>
-        <textarea id="content" name="content" className="textarea" placeholder="Content" onChange={handleChange} value={article.content || ''}/>
+        <textarea id="content" name="content" className="textarea" placeholder="Content" rows="15" onChange={handleChange} value={article.content || ''}/>
         {errors.content && <small>{errors.content}</small>}
       </div>
 
 
-      <button disabled={formInvalid} className="button is-primary">Submit</button>
+      <button disabled={formInvalid} className="button is-rounded">Submit</button>
     </form>
   );
 };

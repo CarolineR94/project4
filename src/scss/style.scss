@@ -1,5 +1,6 @@
 // import google font with @import syntax
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
 
 
 // import bulma initial-variables
@@ -7,18 +8,70 @@
 
 
 // modify bulma variables
-$family-primary: 'Roboto';
+$family-primary: 'Lato';
+$navbar-item-hover-background-color: white;
 
 
 // import bulma
 @import '~bulma';
 
 
-$orioles-orange: #FC440F;
-$medium-spring-green: #1EFFBC;
-$light-slate-grey: #7C9299;
-$medium-blue: #1F01B9;
-$green-lizard: #B4E33D;
+// variables
+$green: #a8ff78;
+$light-blue: #78ffd6;
+$dark-grey: #262626;
+
+
+
+
+// Home
+.home-background{
+  background-image: url('../assets/world-map.png');
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+}
+
+
+// navbar
+
+.navbar{
+  background-color: $dark-grey;
+  padding: .5rem;
+}
+
+.logo{
+  background: -webkit-linear-gradient(top, $green, $light-blue);
+	background: linear-gradient(top, $green, $light-blue);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-family: 'Gentium Book Basic';
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.navbar-icon{
+  background: -webkit-linear-gradient(top, $green, $light-blue);
+  background: linear-gradient(top, $green, $light-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-menu.is-active{
+  background-color: $dark-grey;
+}
+
+.a.navbar-burger{
+  background: -webkit-linear-gradient(top, $green, $light-blue);
+  background: linear-gradient(top, $green, $light-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 // index page
@@ -29,7 +82,7 @@ $green-lizard: #B4E33D;
   height: 15rem;
 }
 
-.index-title{
+.title{
   padding-bottom: 1rem;
 }
 
@@ -37,10 +90,9 @@ $green-lizard: #B4E33D;
 // show page
 .hero-image{
   @extend .card-image;
-  height: 600px;
+  height: 300px;
 }
 
-
-.navbar{
-  background-color: $medium-blue;
+.show-page-article-content{
+  padding: 1em;
 }

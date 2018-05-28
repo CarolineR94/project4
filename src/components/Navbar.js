@@ -26,7 +26,7 @@ class Navbar extends React.Component {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src="" width="112" />
+            <h1 className="logo">lingpost.</h1>
           </Link>
           <a role="button" className={`navbar-burger ${this.state.navIsOpen? 'is-active' : ''}`} onClick={this.handleToggle}>
             <span aria-hidden="true"></span>
@@ -37,11 +37,11 @@ class Navbar extends React.Component {
 
         <div className={`navbar-menu ${this.state.navIsOpen ? 'is-active' : ''}`}>
           <div className="navbar-end">
-            {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item">Logout</a>}
-            {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item">Register</Link>}
-            {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item">Login</Link>}
-            {Auth.isAuthenticated() && <Link to="/articles" className="navbar-item">View Articles</Link>}
-            {Auth.isAuthenticated() && <Link to="/articles/new" className="navbar-item">Write Article</Link>}
+            <Link to="/articles" className="navbar-item navbar-icon"><i className="far fa-lg fa-list-alt"></i></Link>
+            {!Auth.isAuthenticated() && <Link to="/register" className="navbar-item navbar-icon">Register</Link>}
+            {!Auth.isAuthenticated() && <Link to="/login" className="navbar-item navbar-icon">Login</Link>}
+            {Auth.isAuthenticated() && <Link to="/articles/new" className="navbar-item navbar-icon"><i className="fas fa-lg fa-pencil-alt"></i></Link>}
+            {Auth.isAuthenticated() && <a onClick={this.handleLogout} className="navbar-item navbar-icon"><div className="icon"><i className="fas fa-lg fa-sign-out-alt"></i></div></a>}
           </div>
         </div>
       </nav>
