@@ -33,12 +33,12 @@ class ArticlesEdit extends React.Component {
   }
 
   render(){
-    return <ArticleForm
+    return( <ArticleForm
       article={this.state}
       handleChange={this.handleChange}
       handleSubmit={this.handleSubmit}
       errors={this.state.errors}
-    />;
+    />);
   }
 }
 
