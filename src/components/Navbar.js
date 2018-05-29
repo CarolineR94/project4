@@ -29,9 +29,9 @@ class Navbar extends React.Component {
             <h1 className="logo">lingpost.</h1>
           </Link>
           <a role="button" className={`navbar-burger ${this.state.navIsOpen? 'is-active' : ''}`} onClick={this.handleToggle}>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <span aria-hidden="true" className="burger-icon"></span>
+            <span aria-hidden="true" className="burger-icon"></span>
+            <span aria-hidden="true" className="burger-icon"></span>
           </a>
         </div>
 

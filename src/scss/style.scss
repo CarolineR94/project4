@@ -9,7 +9,11 @@
 
 // modify bulma variables
 $family-primary: 'Lato';
-$navbar-item-hover-background-color: white;
+
+$navbar-item-hover-background: blue;
+$navbar-item-active: white;
+$navbar-item-active-background: red;
+
 
 
 // import bulma
@@ -29,6 +33,10 @@ $dark-grey: #262626;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin background-gradient($dir, $from, $to) {
+  background-image:
+    -webkit-linear-gradient($dir, $from, $to),
+}
 
 // Home
 .home-background{
@@ -75,6 +83,13 @@ $dark-grey: #262626;
   background-color: $dark-grey;
 }
 
+.burger-icon{
+  @include background-gradient(left, $green, $light-blue);
+}
+
+.navbar-burger{
+  height: 5rem;
+}
 
 // index page
 .card-image{
@@ -109,4 +124,9 @@ $dark-grey: #262626;
   border-radius: 50px;
   background: $dark-grey;
   @include text-gradient(left, $green, $light-blue);
+}
+
+.translate-icon{
+  @include text-gradient(left, $green, $light-blue);
+
 }

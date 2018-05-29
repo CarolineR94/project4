@@ -28,8 +28,8 @@ class ArticlesNew extends React.Component {
           .post(`/api/articles/${article.data._id}/translations`, this.state, {
             headers: { Authorization: `Bearer ${Auth.getToken()}` }
           })
+          .then(() => this.props.history.push('/articles'))
           .catch(err => this.setState({ errors: err.response.data.errors }));
-        this.props.history.push('/articles');
       })
       .catch(err => this.setState({ errors: err.response.data.errors }));
   }

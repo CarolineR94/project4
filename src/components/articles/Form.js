@@ -29,6 +29,7 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
             </select>
           </div>
         </div>
+        {errors.language && <small>{errors.language}</small>}
       </div>
 
       <div className="field">

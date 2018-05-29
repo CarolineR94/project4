@@ -57,7 +57,7 @@ mongoose.connect(dbURI, (err, db) => {
       }, {
         translations: [{
           title: 'Regierung will Umsetzung des Kreuz-Erlasses nicht überprüfen',
-          tagline: 'x',
+          tagline: 'Der Innenministerium Bayerns hat sich entschieden, die Umsetzung des Kreuzerlasses nicht zu überprüfen',
           image: 'https://cdnwww.pnp.de/Kreuz/Wand/Bayerns/Ministerpraesident/Markus/2570067/_/1xTY0EmM4lkKrZpTLFFrWiZa356owvcAYkoEvaS2hysr_OC45fvetjra5j1huLjxPBfdWZEqGqLZsUkSRECk8gdMi--_GjSiCWmv49BHBqqbngAR3SAVX04H4O2bqRXvdqsVqorUCRn8CzdT-RP5rWRQ/180525-1439-urn-newsml-dpa-com-20090101-180525-99-445727-large-4-3.jpg',
           language: 'de',
           content: `Die Umsetzung der Kreuz-Pflicht in Bayerns staatlichen Dienstgebäuden will das Innenministerium nicht überwachen. Darin sehen die Landtags-Grünen bereits das Aus für den von Ministerpräsident Markus Söder (CSU) öffentlichkeitswirksam verkündeten Erlass. "Der Kreuz-Erlass soll offensichtlich sang- und klanglos beerdigt werden", sagte die religionspolitische Sprecherin der Grünen-Fraktion und Landtags-Vizepräsidentin Ulrike Gote am Freitag. Die bundesweit kontrovers diskutierte und auch innerkirchlich umstrittene Verordnung tritt am 1. Juni in Kraft.
@@ -65,7 +65,7 @@ mongoose.connect(dbURI, (err, db) => {
           author: users[1]
         }, {
           title: 'No inspection regarding implementation of the Cross law',
-          tagline: 'x',
+          tagline: 'The bavarian interior ministry has decided not to conduct checks on the implementation of the new cross law',
           image: 'https://cdnwww.pnp.de/Kreuz/Wand/Bayerns/Ministerpraesident/Markus/2570067/_/1xTY0EmM4lkKrZpTLFFrWiZa356owvcAYkoEvaS2hysr_OC45fvetjra5j1huLjxPBfdWZEqGqLZsUkSRECk8gdMi--_GjSiCWmv49BHBqqbngAR3SAVX04H4O2bqRXvdqsVqorUCRn8CzdT-RP5rWRQ/180525-1439-urn-newsml-dpa-com-20090101-180525-99-445727-large-4-3.jpg',
           language: 'en',
           content: `The interior ministry of Bavaria has no intention of overseeing the implementation of the compulsory presence of a cross in Bavarian public office buildings. "We see no reason for an inspection - and are pleased about every cross put up," stated ministry spokesperson Oliver Platzer to the Augsburger Allgemeinen on Friday. "We assume that the respective heads of staff of the public authorities know the various bylaws and will implement them accordingly".
@@ -73,7 +73,7 @@ mongoose.connect(dbURI, (err, db) => {
           author: users[1]
         }, {
           title: 'Aucun contrôle pour la mise en oeuvre de la loi de la croix',
-          tagline: 'x',
+          tagline: 'Le ministère de l\'intérieur de Bavière a décidé de ne pas superviser la mise en oeuvre de la loi de la croix',
           image: 'https://cdnwww.pnp.de/Kreuz/Wand/Bayerns/Ministerpraesident/Markus/2570067/_/1xTY0EmM4lkKrZpTLFFrWiZa356owvcAYkoEvaS2hysr_OC45fvetjra5j1huLjxPBfdWZEqGqLZsUkSRECk8gdMi--_GjSiCWmv49BHBqqbngAR3SAVX04H4O2bqRXvdqsVqorUCRn8CzdT-RP5rWRQ/180525-1439-urn-newsml-dpa-com-20090101-180525-99-445727-large-4-3.jpg',
           language: 'fr',
           content: `Le ministère de l'intérieure de Bavière n'a pas l'intention de superviser la mise en oeuvre de la présence obligatoire d'une croix dans les bâtiments des fonctions officielles de Bavière. "Nous ne voyons aucune raison pour une inspection - et nous sommes contents de chaque croix qui accroche," a déclaré le porte-parole du ministère, Oliver Platzer, au Augsburger Allgemeinen (vendredi). "Nous supposons que les chefs respectifs des pouvoirs publics connaissent les règlements administratifs et donc s'en occuperont".

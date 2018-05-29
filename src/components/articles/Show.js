@@ -45,7 +45,7 @@ class ArticlesShow extends React.Component{
           <ul className="show-buttons">
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/edit`} className="button show-button"><i className="fas fa-lg fa-edit"></i></Link>
             <button onClick={this.handleDelete} className="button show-button"><i className="far fa-lg fa-trash-alt"></i></button>
-            <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/translate`} className="button show-button"><img src="../../assets/translate.svg"/></Link>
+            <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/translate`} className="button show-button"><img className="translate-icon" src="../../assets/translate.svg"/></Link>
             {/* {article.translatedInto.map(language =>
               <Link key={language} to={`/articles/${article._id}/${language}`}>
                 {language}

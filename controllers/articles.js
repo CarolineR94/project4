@@ -44,7 +44,8 @@ function deleteRoute(req, res, next){
   Article
     .findById(req.params.id)
     .then(article => {
-      return article.remove();
+      const translation = article.translations.find(translation => translation.language === req.params.language);
+      return translation.remove();
     })
     .then(() => res.sendStatus(204))
     .catch(next);
