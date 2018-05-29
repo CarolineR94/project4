@@ -19,12 +19,6 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
 
       <div className="field">
         <label htmlFor="language">Language</label>
-        <textarea id="language" name="language" className="input" placeholder="Language" onChange={handleChange} value={article.language || ''}/>
-        {errors.language && <small>{errors.language}</small>}
-      </div>
-
-      <div className="field">
-        <label htmlFor="language">Language</label>
         <div className="control">
           <div className="select">
             <select id="language" name="language" onChange={handleChange} value={article.language || ''}>

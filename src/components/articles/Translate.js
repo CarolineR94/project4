@@ -23,7 +23,7 @@ class ArticlesTranslate extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     axios
-      .post('/api/articles/translations', this.state,  {
+      .post(`/api/articles/${this.props.match.params.id}/translations`, this.state,  {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
       .then(() => this.props.history.push(` /api/articles/${this.props.match.params.id}/${this.props.match.params.language}`))

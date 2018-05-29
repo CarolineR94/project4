@@ -18,10 +18,19 @@ class ArticlesNew extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     axios
+      // First create article
       .post('/api/articles', this.state,  {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      .then(() => this.props.history.push('/articles'))
+      // Then create translation
+      .then((article) => {
+        axios
+          .post(`/api/articles/${article.data._id}/translations`, this.state, {
+            headers: { Authorization: `Bearer ${Auth.getToken()}` }
+          })
+          .catch(err => this.setState({ errors: err.response.data.errors }));
+        this.props.history.push('/articles');
+      })
       .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 

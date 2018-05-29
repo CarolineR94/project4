@@ -22,6 +22,12 @@ $light-blue: #78ffd6;
 $dark-grey: #262626;
 
 
+// mixins
+@mixin text-gradient($dir, $from, $to) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 // Home
@@ -48,31 +54,25 @@ $dark-grey: #262626;
 }
 
 .logo{
-  background: -webkit-linear-gradient(top, $green, $light-blue);
-	background: linear-gradient(top, $green, $light-blue);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  @include text-gradient(left, $green, $light-blue);
   font-family: 'Gentium Book Basic';
   font-size: 45px;
   font-weight: bold;
 }
 
 .navbar-icon{
-  background: -webkit-linear-gradient(top, $green, $light-blue);
-  background: linear-gradient(top, $green, $light-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include text-gradient(left, $green, $light-blue);
 }
+
+.nav-icon-display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .navbar-menu.is-active{
   background-color: $dark-grey;
-}
-
-.a.navbar-burger{
-  background: -webkit-linear-gradient(top, $green, $light-blue);
-  background: linear-gradient(top, $green, $light-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 
@@ -107,9 +107,6 @@ $dark-grey: #262626;
   height: 50px;
   padding: 2%;
   border-radius: 50px;
-  background: -webkit-linear-gradient(top, $green, $light-blue);
-	background: linear-gradient(top, $green, $light-blue);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  color: white;
+  background: $dark-grey;
+  @include text-gradient(left, $green, $light-blue);
 }
