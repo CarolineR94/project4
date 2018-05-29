@@ -11,9 +11,9 @@ function indexRoute(req, res, next){
 }
 
 function showRoute(req, res, next){
-  console.log(`id requested ${req.params.id}`);
   Article
     .findById(req.params.id)
+    .populate('translations.author')
     .then(article => {
       const translation = article.translations.find(translation => translation.language === req.params.language);
       res.json(translation);
@@ -32,9 +32,10 @@ function updateRoute(req, res, next){
   Article
     .findById(req.params.id)
     .then(article => {
-      return Object.assign(article, req.body);
+      const translation = article.translations.find(translation => translation.language === req.params.language);
+      Object.assign(translation, req.body);
+      return article.save();
     })
-    .then(article => article.save())
     .then(article => res.json(article))
     .catch(next);
 }

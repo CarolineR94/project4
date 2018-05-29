@@ -23,9 +23,9 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
           <div className="select">
             <select id="language" name="language" onChange={handleChange} value={article.language || ''}>
               <option>Please select</option>
-              <option value="1">en</option>
-              <option value="2">fr</option>
-              <option value="3">it</option>
+              <option value="en">en</option>
+              <option value="fr">fr</option>
+              <option value="it">it</option>
             </select>
           </div>
         </div>

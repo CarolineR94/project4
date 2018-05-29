@@ -8,8 +8,11 @@ class ArticlesIndex extends React.Component{
   state = {
     articles: [],
     search: '',
-    sort: 'language|asc'
+    languageFilter: 'en'
   }
+
+
+
 
   componentDidMount(){
     axios.get('/api/articles')

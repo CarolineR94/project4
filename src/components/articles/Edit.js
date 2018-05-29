@@ -22,12 +22,12 @@ class ArticlesEdit extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { id } = this.props.match.params;
+    const { id, language } = this.props.match.params;
     axios
-      .put(`/api/articles/${id}/${this.props.match.params.language}`, this.state, {
+      .put(`/api/articles/${id}/${language}`, this.state, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      .then(() => this.props.history.push(`/articles/${id}/${this.props.match.params.language}`))
+      .then(() => this.props.history.push(`/articles/${id}/${language}`))
       .catch(err => this.setState({ errors: err.response.data.errors }));
 
   }
