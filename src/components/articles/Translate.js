@@ -10,11 +10,15 @@ class ArticlesTranslate extends React.Component {
     errors: {}
   };
 
+  componentDidMount(){
+    axios.get(`/api/articles/${this.props.match.params.id}/${this.props.match.params.language}`)
+      .then(res => this.setState({ translation: res.data }));
+  }
+
   handleChange = ({ target: { name, value } }) => {
     const errors = {...this.state.errors, [name]: ''};
     this.setState({ errors, [name]: value });
   }
-
 
   handleSubmit = e => {
     e.preventDefault();
@@ -30,7 +34,8 @@ class ArticlesTranslate extends React.Component {
     return(
       <div className="columns">
         <div className="column">
-          <ArticlesShow/>
+          {/* TODO: Is this a good way to pass the URL to a child component? */}
+          <ArticlesShow match={this.props.match}/>
         </div>
         <div className="column">
           <ArticleForm

@@ -11,6 +11,7 @@ function indexRoute(req, res, next){
 }
 
 function showRoute(req, res, next){
+  console.log(`id requested ${req.params.id}`);
   Article
     .findById(req.params.id)
     .then(article => {

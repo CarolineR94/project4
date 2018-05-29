@@ -13,6 +13,7 @@ import ArticlesIndex from './components/articles/Index';
 import ArticlesShow from './components/articles/Show';
 import ArticlesNew from './components/articles/New';
 import ArticlesEdit from './components/articles/Edit';
+import ArticlesTranslate from './components/articles/Translate';
 
 import AuthLogin from './components/auth/Login';
 import AuthRegister from './components/auth/Register';
@@ -37,6 +38,7 @@ class App extends React.Component {
               <Switch>
                 <SecureRoute path="/articles/new" component={ArticlesNew} />
                 <SecureRoute path="/articles/:id/:language/edit" component={ArticlesEdit} />
+                <SecureRoute path="/articles/:id/:language/translate" component={ArticlesTranslate} />
                 <Route path="/articles/:id/:language" component={ArticlesShow} />
                 <Route path="/articles" component={ArticlesIndex} />
                 <Route path="/login" component={AuthLogin} />
