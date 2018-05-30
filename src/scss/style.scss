@@ -5,15 +5,14 @@
 
 // import bulma initial-variables
 @import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
 
 
 // modify bulma variables
 $family-primary: 'Lato';
-
-$navbar-item-hover-background: blue;
-$navbar-item-active: white;
-$navbar-item-active-background: red;
-
+$button-border-color: transparent;
+$button-hover-color: none;
+$button-hover-border-color:	none;
 
 
 // import bulma
@@ -78,11 +77,6 @@ $dark-grey: #262626;
   justify-content: center;
 }
 
-
-.navbar-menu.is-active{
-  background-color: $dark-grey;
-}
-
 .burger-icon{
   @include background-gradient(left, $green, $light-blue);
 }
@@ -101,6 +95,10 @@ $dark-grey: #262626;
 
 .title{
   padding-bottom: 1rem;
+}
+
+.index-language-button{
+  border: solid 1px grey;
 }
 
 
@@ -122,6 +120,9 @@ $dark-grey: #262626;
   height: 50px;
   padding: 2%;
   border-radius: 50px;
+  &.show-button:hover, .show-button.is-hovered{
+    transform: scale(1.1);
+  }
 }
 
 .delete-icon{
@@ -141,6 +142,7 @@ $dark-grey: #262626;
 
 
 
+// searchbar
 
 select.is-rounded{
   border-radius: 50px;

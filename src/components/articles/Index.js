@@ -20,15 +20,20 @@ class ArticlesIndex extends React.Component{
   }
 
 
-  handleChange = ({ target: { name, value } }) => {
-    this.setState({ [name]: value });
+  handleChange = ({ target: { value } }) => {
+    console.log('here', value);
+    this.setState({ search: value });
   }
 
   filteredArticles = () => {
     const re = new RegExp(this.state.search, 'i');
-    _.filter(this.state.articles, article => {
-      return re.test(article) || re.test(article);
+    const filteredTranslations = _.filter(this.state.articles, article => {
+      const translation = article.translations.map(translation => {
+        return translation.language;
+      });
+      return re.test(translation);
     });
+    return filteredTranslations;
   }
 
 
@@ -40,7 +45,7 @@ class ArticlesIndex extends React.Component{
           data={this.state}
         />
         <div className="columns is-multiline">
-          {this.state.articles.map(article =>
+          {this.filteredArticles().map(article =>
             <div className="column is-one-third-desktop is-half-tablet" key={article._id}>
               <div className="card">
                 <div className="card-image"
@@ -57,7 +62,7 @@ class ArticlesIndex extends React.Component{
 
 
                   {article.translatedInto.map(language =>
-                    <Link className="button is-rounded" key={language} to={`/articles/${article._id}/${language}`}>
+                    <Link className="button is-rounded index-language-button" key={language} to={`/articles/${article._id}/${language}`}>
                       {language}
                     </Link>
                   )}

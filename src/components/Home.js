@@ -5,9 +5,8 @@ import SearchBar from './articles/SearchBar';
 const Home = () => {
   return(
     <div>
-      <div className="home-background">
-        <SearchBar/>
-      </div>
+      <SearchBar />
+      <div className="home-background"></div>
     </div>
   );
 };
