@@ -85,12 +85,24 @@ $dark-grey: #262626;
   height: 5rem;
 }
 
+@media screen and (max-width: 1087px){
+.navbar-menu.is-active {
+    background-color: $dark-grey;
+  }
+}
+
 // index page
+.card{
+  border-radius: 30px;
+}
+
 .card-image{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 15rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .title{
@@ -99,6 +111,7 @@ $dark-grey: #262626;
 
 .index-language-button{
   border: solid 1px grey;
+  margin: 5px;
 }
 
 
@@ -125,6 +138,12 @@ $dark-grey: #262626;
   }
 }
 
+@media screen and (max-width: 693px){
+  ul.show-buttons{
+    display: flex;
+  }
+}
+
 .delete-icon{
   background-color: red;
   color: white;
@@ -146,4 +165,21 @@ $dark-grey: #262626;
 
 select.is-rounded{
   border-radius: 50px;
+}
+
+
+// Auth
+.login-button, .register-button{
+  border: 1px solid grey;
+}
+
+
+
+
+.input{
+  border-radius: 50px;
+}
+
+.textarea{
+  border-radius: 30px;
 }

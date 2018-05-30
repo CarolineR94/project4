@@ -64,7 +64,7 @@ class AuthRegister extends React.Component{
             onChange={this.handleChange}
           />
         </div>
-        <button className="button is-rounded">Submit</button>
+        <button className="button is-rounded register-button">Register</button>
       </form>
     );
   }

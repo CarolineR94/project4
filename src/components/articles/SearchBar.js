@@ -5,6 +5,10 @@ const SearchBar = ({ handleChange }) => {
 
   const languages = [
     {
+      code: 'all',
+      name: 'All languages'
+    },
+    {
       code: 'af',
       name: 'Afrikaans'
     },
@@ -104,7 +108,6 @@ const SearchBar = ({ handleChange }) => {
       <p className="control has-icons-left">
         <span className="select">
           <select className="is-rounded" onChange={handleChange}>
-            <option default>Choose language...</option>
             {languages.map(language =>
               <option
                 key={language.code}

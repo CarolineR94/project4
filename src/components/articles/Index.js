@@ -9,8 +9,7 @@ import _ from 'lodash';
 class ArticlesIndex extends React.Component{
   state = {
     articles: [],
-    search: '',
-    languageFilter: 'en'
+    search: 'all'
   }
 
 
@@ -26,14 +25,8 @@ class ArticlesIndex extends React.Component{
   }
 
   filteredArticles = () => {
-    const re = new RegExp(this.state.search, 'i');
-    const filteredTranslations = _.filter(this.state.articles, article => {
-      const translation = article.translations.map(translation => {
-        return translation.language;
-      });
-      return re.test(translation);
-    });
-    return filteredTranslations;
+    if(this.state.search === 'all') return this.state.articles;
+    return _.filter(this.state.articles, article => article.translatedInto.includes(this.state.search));
   }
 
 
