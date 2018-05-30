@@ -35,12 +35,14 @@ class ArticlesNew extends React.Component {
   }
 
   render(){
-    return <ArticleForm
-      article={this.state}
-      handleChange={this.handleChange}
-      handleSubmit={this.handleSubmit}
-      errors={this.state.errors}
-    />;
+    return(
+      <ArticleForm
+        article={this.state}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+        errors={this.state.errors}
+      />
+    );
   }
 }
 

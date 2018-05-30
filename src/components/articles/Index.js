@@ -38,6 +38,7 @@ class ArticlesIndex extends React.Component{
           data={this.state}
         />
         <div className="columns is-multiline">
+          {/* {this.filteredArticles.length === 0 && <p>No articles yet!</p>} */}
           {this.filteredArticles().map(article =>
             <div className="column is-one-third-desktop is-half-tablet" key={article._id}>
               <div className="card">
