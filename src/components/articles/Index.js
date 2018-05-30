@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import _ from 'lodash';
+
 
 
 class ArticlesIndex extends React.Component{
@@ -12,18 +14,31 @@ class ArticlesIndex extends React.Component{
   }
 
 
-
-
   componentDidMount(){
     axios.get('/api/articles')
       .then(res => this.setState({ articles: res.data }));
   }
 
 
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
+  }
+
+  filteredArticles = () => {
+    const re = new RegExp(this.state.search, 'i');
+    _.filter(this.state.articles, article => {
+      return re.test(article) || re.test(article);
+    });
+  }
+
+
   render(){
     return(
       <div>
-        <SearchBar/>
+        <SearchBar
+          handleChange={this.handleChange}
+          data={this.state}
+        />
         <div className="columns is-multiline">
           {this.state.articles.map(article =>
             <div className="column is-one-third-desktop is-half-tablet" key={article._id}>

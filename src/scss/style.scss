@@ -125,15 +125,17 @@ $dark-grey: #262626;
 }
 
 .delete-icon{
-  color: red;
+  background-color: red;
+  color: white;
 }
 
 .edit-icon{
-  color: $green;
+  background-color: $green;
+  color: $dark-grey;
 }
 
 .translate-icon{
-  @include text-gradient(left, $green, $light-blue);
+  background-color: $light-blue;
 }
 
 
