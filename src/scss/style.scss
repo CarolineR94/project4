@@ -122,11 +122,24 @@ $dark-grey: #262626;
   height: 50px;
   padding: 2%;
   border-radius: 50px;
-  background: $dark-grey;
-  @include text-gradient(left, $green, $light-blue);
+}
+
+.delete-icon{
+  color: red;
+}
+
+.edit-icon{
+  color: $green;
 }
 
 .translate-icon{
   @include text-gradient(left, $green, $light-blue);
+}
 
+
+
+
+
+select.is-rounded{
+  border-radius: 50px;
 }

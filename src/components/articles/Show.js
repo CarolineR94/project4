@@ -35,16 +35,17 @@ class ArticlesShow extends React.Component{
             <div className="card-content">
               <h1 className="title is-3">{translation.title}</h1>
               <h2 className="subtitle is-5">{translation.tagline}</h2>
-              {translation.author && <small><em>By {translation.author.username}</em></small>}
-              <small>{translation.createdAtRelative}</small>
+              {translation.author && <small>By {translation.author.username}</small>}
+              <br/>
+              <small><em>{translation.createdAtRelative}</em></small>
               <p className="show-page-article-content">{translation.content}</p>
             </div>
           </div>
         </div>
         <div className="column is-2">
           <ul className="show-buttons">
-            <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/edit`} className="button show-button"><i className="fas fa-lg fa-edit"></i></Link>
-            <button onClick={this.handleDelete} className="button show-button"><i className="far fa-lg fa-trash-alt"></i></button>
+            <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/edit`} className="button show-button edit-icon"><i className="fas fa-lg fa-edit"></i></Link>
+            <button onClick={this.handleDelete} className="button show-button delete-icon"><i className="far fa-lg fa-trash-alt"></i></button>
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/translate`} className="button show-button"><img className="translate-icon" src="../../assets/translate.svg"/></Link>
             {/* {article.translatedInto.map(language =>
               <Link key={language} to={`/articles/${article._id}/${language}`}>
