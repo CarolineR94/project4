@@ -37,34 +37,36 @@ class ArticlesIndex extends React.Component{
           handleChange={this.handleChange}
           data={this.state}
         />
-        <div className="columns is-multiline">
-          {/* {this.filteredArticles.length === 0 && <p>No articles yet!</p>} */}
-          {this.filteredArticles().map(article =>
-            <div className="column is-one-third-desktop is-half-tablet" key={article._id}>
-              <div className="card">
-                <div className="card-image"
-                  style={{ backgroundImage: `url(${article.translations[0].image})` }}>
-                </div>
-
-                <div className="card-content">
-                  <div className="media">
-                    <div className="media-content">
-                      <p className="title is-4 index-title">{article.translations[0].title}</p>
-                      <p className="subtitle is-6 index-subtitle">{article.translations[0].tagline}</p>
-                    </div>
+        <div className="articles">
+          <div className="columns is-multiline">
+            {this.filteredArticles().length === 0 && <p>No articles yet!</p>}
+            {this.filteredArticles().map(article =>
+              <div className="column is-one-third-desktop is-half-tablet" key={article._id}>
+                <div className="card">
+                  <div className="card-image"
+                    style={{ backgroundImage: `url(${article.translations[0].image})` }}>
                   </div>
 
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-content">
+                        <p className="title is-4 index-title">{article.translations[0].title}</p>
+                        <p className="subtitle is-6 index-subtitle">{article.translations[0].tagline}</p>
+                      </div>
+                    </div>
 
-                  {article.translatedInto.map(language =>
-                    <Link className="button is-rounded index-language-button" key={language} to={`/articles/${article._id}/${language}`}>
-                      {language}
-                    </Link>
-                  )}
+
+                    {article.translatedInto.map(language =>
+                      <Link className="button is-rounded index-language-button" key={language} to={`/articles/${article._id}/${language}`}>
+                        {language}
+                      </Link>
+                    )}
+                  </div>
+
                 </div>
-
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     );
