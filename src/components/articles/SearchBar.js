@@ -107,7 +107,7 @@ const SearchBar = ({ handleChange }) => {
     <div className="field">
       <p className="control has-icons-left">
         <span className="select">
-          <select className="is-rounded" onChange={handleChange}>
+          <select className="is-rounded" name="language" onChange={handleChange}>
             {languages.map(language =>
               <option
                 key={language.code}

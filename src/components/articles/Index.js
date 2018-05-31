@@ -20,7 +20,6 @@ class ArticlesIndex extends React.Component{
 
 
   handleChange = ({ target: { value } }) => {
-    console.log('here', value);
     this.setState({ search: value });
   }
 

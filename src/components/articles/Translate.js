@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleForm from './Form';
-import ArticlesShow from './Show';
+import Card from './Card';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
 
@@ -31,11 +31,11 @@ class ArticlesTranslate extends React.Component {
   }
 
   render(){
+    if(!this.state.translation) return null;
     return(
       <div className="columns">
         <div className="column">
-          {/* TODO: Is this a good way to pass the URL to a child component? */}
-          <ArticlesShow match={this.props.match}/>
+          <Card translation={this.state.translation} />
         </div>
         <div className="column">
           <ArticleForm
