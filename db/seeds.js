@@ -82,7 +82,7 @@ mongoose.connect(dbURI, (err, db) => {
         }]
       }, {
         translations: [{
-          title: 'Ambitious women shouldn\'t be afraid of the word "bitch". Or the term "ambitchous"',
+          title: 'Ambitious women shouldn\'t be afraid of the word \'bitch\'. Or the term \'ambitchous\'',
           tagline: 'Sometimes we all have to do things that other people don\'t like. It doesn\'t make us bitches',
           image: 'http://www.leisureopportunities.com/images/551020_186616.jpg',
           language: 'en',

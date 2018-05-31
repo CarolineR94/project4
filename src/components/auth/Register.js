@@ -22,8 +22,8 @@ class AuthRegister extends React.Component{
       })
       .then(() => this.props.history.push('/articles'))
       .catch(() => {
-        Flash.setMessage('danger', 'Invalid credentials');
-        this.props.history.replace('/login');
+        Flash.setMessage('danger', 'Oops! Please enter your details again.');
+        this.props.history.replace('/register');
       });
   }
 

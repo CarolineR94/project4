@@ -31,18 +31,24 @@ class ArticlesShow extends React.Component{
       <div className="columns is-multiline">
         <Card translation={translation} />
         <div className="column is-2">
+
+          {Auth.isAuthenticated() &&
           <ul className="show-buttons">
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/edit`} className="button show-button edit-icon"><i className="fas fa-lg fa-edit"></i></Link>
 
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/translate`} className="button show-button translate-icon"><img src="../../assets/translate.svg"/></Link>
 
             <button onClick={this.handleDelete} className="button show-button delete-icon"><i className="far fa-lg fa-trash-alt"></i></button>
-            {/* {article.translatedInto.map(language =>
+          </ul>}
+
+          {/* <ul>
+            {article.translatedInto.map(language =>
               <Link key={language} to={`/articles/${article._id}/${language}`}>
                 {language}
               </Link>
-            )} */}
-          </ul>
+            )}
+          </ul> */}
+
         </div>
       </div>
     );
