@@ -29,7 +29,7 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
 
       <div className="field">
         <label htmlFor="tagline">Tagline</label>
-        <input id="tagline" name="tagline" className="textarea" placeholder="Tagline" rows="10" onChange={handleChange} value={article.tagline || ''} />
+        <textarea id="tagline" name="tagline" className="textarea" placeholder="Tagline" rows="10" onChange={handleChange} value={article.tagline || ''} />
         {errors.tagline && <small>{errors.tagline}</small>}
       </div>
 
