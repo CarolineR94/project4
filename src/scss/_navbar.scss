@@ -34,3 +34,16 @@
     background-color: $dark-grey;
   }
 }
+
+
+.navbar, .navbar-menu, .navbar-start, .navbar-end{
+
+  @media screen and (min-width: 300px){
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
+
+  }
+}
