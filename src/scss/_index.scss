@@ -16,11 +16,14 @@
   padding-bottom: 1rem;
 }
 
+.articles{
+  margin-top: 40px;
+}
+
 .index-language-button{
   border: solid 1px grey;
   margin: 5px;
-}
-
-.articles{
-  margin-top: 40px;
+  &:hover{
+    transform: scale(1.1);
+  }
 }

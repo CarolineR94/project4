@@ -36,3 +36,25 @@ select.is-rounded{
 
   }
 }
+
+.homepage-button{
+
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+  @-webkit-keyframes color-change-2x {
+  0% {
+    background: $green;
+  }
+  100% {
+    background: $light-blue;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: $green;
+  }
+  100% {
+    background: $light-blue;
+  }
+}

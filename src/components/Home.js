@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return(
     <div>
-      <h1>A community sourced worldwide blog</h1>
-      <h1>The world is at your fingertips</h1>
-      <Link to={'/articles'}><h1>View posts</h1></Link>
+      <h1>Welcome to lingpost.</h1>
+      <h1>A community sourced blog The world is at your fingertips</h1>
+      <Link to={'/articles'}><button className="button is-rounded is-large homepage-button"><h1>View posts</h1></button></Link>
     </div>
   );
 };
