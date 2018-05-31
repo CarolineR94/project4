@@ -17,7 +17,7 @@ class ArticlesTranslate extends React.Component {
 
   handleChange = ({ target: { name, value } }) => {
     const errors = {...this.state.errors, [name]: ''};
-    this.setState({ errors, [name]: value });
+    this.setState({ errors, [name]: value }, () => console.log(this.state));
   }
 
   handleSubmit = e => {
@@ -26,7 +26,7 @@ class ArticlesTranslate extends React.Component {
       .post(`/api/articles/${this.props.match.params.id}/translations`, this.state,  {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      .then(() => this.props.history.push(` /api/articles/${this.props.match.params.id}/${this.props.match.params.language}`))
+      .then(() => this.props.history.push(`/articles/${this.props.match.params.id}/${this.props.match.params.language}`))
       .catch(err => this.setState({ errors: err.response.data.errors }));
   }
 
@@ -42,6 +42,7 @@ class ArticlesTranslate extends React.Component {
             article={this.state}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            handleLanguageChange={this.handleLanguageChange}
             errors={this.state.errors}
           />
         </div>

@@ -173,8 +173,14 @@ select.is-rounded{
 
 // Auth
 .login-button, .register-button{
-  border: 1px solid grey;
+  background-color: $green;
 }
+
+.login-button:hover, .register-button:hover{
+  @include background-gradient(left, $green, $light-blue);
+}
+
+
 
 
 // misc

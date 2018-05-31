@@ -29,7 +29,6 @@ class ArticlesEdit extends React.Component {
       })
       .then(() => this.props.history.push(`/articles/${id}/${language}`))
       .catch(err => this.setState({ errors: err.response.data.errors }));
-
   }
 
   render(){

@@ -21,7 +21,9 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
 
       <div className="field">
         <label htmlFor="language">Language</label>
-        <SearchBar/>
+        <SearchBar
+          handleChange={handleChange}
+        />
         {errors.language && <small>{errors.language}</small>}
       </div>
 
