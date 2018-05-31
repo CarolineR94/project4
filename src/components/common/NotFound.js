@@ -20,7 +20,7 @@ const NotFound = () => {
       <div  className="404-image-container">
         <img className="404-image" src="../../assets/404_5.jpg"/>
       </div> */}
-      <img className="image is-1by1" src="../../assets/404_6.png"/>
+      <img className="image is-1by3" src="../../assets/404_6.png"/>
     </div>
   );
 };

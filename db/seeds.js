@@ -56,7 +56,7 @@ mongoose.connect(dbURI, (err, db) => {
         }]
       }, {
         translations: [{
-          title: 'Ditching meat could prevent a third of early deaths, say harvard scientists',
+          title: 'Ditching meat could prevent a third of early deaths, say Harvard scientists',
           tagline: 'Doctors claimed that the positive effects of vegetarian and vegan diets have been underestimated',
           image: 'https://uploads-ssl.webflow.com/57dc5ba03bd579bc1ed6eab6/5ae311cdf34ffb726b266807_vegan-plantbased-doctor.jpg',
           language: 'en',
@@ -84,7 +84,7 @@ mongoose.connect(dbURI, (err, db) => {
         translations: [{
           title: 'Ambitious women shouldn\'t be afraid of the word "bitch". Or the term "ambitchous"',
           tagline: 'Sometimes we all have to do things that other people don\'t like. It doesn\'t make us bitches',
-          image: 'https://d3enniz247y0a9.cloudfront.net/website/var/tmp/image-thumbnails/100000/102494/thumb__article-header-portrait/Hero_Portrait_Image_Work_Ambitchious_Movie_Feud@2x.jpeg',
+          image: 'http://www.leisureopportunities.com/images/551020_186616.jpg',
           language: 'en',
           content: `I was talking to a friend about a big step-up she was facing at work and she suddenly said, "I know I need to do this. But I'm hesitating because I am scared people will call me a bitch." My reply was harsh: "They might call you a bitch. It doesn't mean you are one. In fact, I know you're not one. And you know you're not one." What is she, instead of that word? Ambitious. Assertive. Self-driven. Decisive. Brave. Those are not bitch qualities. They are the qualities of self-preservation.
 

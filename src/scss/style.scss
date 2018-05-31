@@ -23,6 +23,7 @@ $button-hover-border-color:	none;
 $green: #a8ff78;
 $light-blue: #78ffd6;
 $dark-grey: #262626;
+$pink: #ff7878;
 
 
 // mixins
@@ -173,11 +174,11 @@ select.is-rounded{
 
 // Auth
 .login-button, .register-button{
-  background-color: $green;
+  @include background-gradient(left, $green, $light-blue);
 }
 
 .login-button:hover, .register-button:hover{
-  @include background-gradient(left, $green, $light-blue);
+  @include background-gradient(right, $green, $light-blue);
 }
 
 
@@ -199,4 +200,12 @@ select.is-rounded{
 
 .textarea{
   border-radius: 30px;
+}
+
+.submit-button{
+  @include background-gradient(left, $green, $light-blue);
+  &:hover{
+    @include background-gradient(right, $green, $light-blue);
+
+  }
 }

@@ -40,7 +40,7 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
       </div>
 
 
-      <button disabled={formInvalid} className="button is-rounded">Submit</button>
+      <button disabled={formInvalid} className="button is-rounded submit-button">Submit</button>
     </form>
   );
 };
