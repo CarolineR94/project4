@@ -1,0 +1,26 @@
+// index page
+.card{
+  border-radius: 30px;
+}
+
+.card-image{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.title{
+  padding-bottom: 1rem;
+}
+
+.index-language-button{
+  border: solid 1px grey;
+  margin: 5px;
+}
+
+.articles{
+  margin-top: 40px;
+}

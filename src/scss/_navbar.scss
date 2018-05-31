@@ -1,0 +1,36 @@
+// navbar
+.navbar{
+  background-color: $dark-grey;
+  padding: .5rem;
+}
+
+.logo{
+  @include text-gradient(left, $green, $light-blue);
+  font-family: 'Gentium Book Basic';
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.navbar-icon{
+  @include text-gradient(left, $green, $light-blue);
+}
+
+.nav-icon-display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-icon{
+  @include background-gradient(left, $green, $light-blue);
+}
+
+.navbar-burger{
+  height: 5rem;
+}
+
+@media screen and (max-width: 1087px){
+.navbar-menu.is-active {
+    background-color: $dark-grey;
+  }
+}

@@ -1,0 +1,38 @@
+// searchbar
+
+select.is-rounded{
+  border-radius: 50px;
+}
+
+
+// auth
+.login-button, .register-button{
+  @include background-gradient(left, $green, $light-blue);
+}
+
+.login-button:hover, .register-button:hover{
+  @include background-gradient(right, $green, $light-blue);
+}
+
+
+// misc
+.not-found{
+  font-family: 'Gentium Book Basic';
+  font-size: 60px;
+}
+
+.input{
+  border-radius: 50px;
+}
+
+.textarea{
+  border-radius: 30px;
+}
+
+.submit-button{
+  @include background-gradient(left, $green, $light-blue);
+  &:hover{
+    @include background-gradient(right, $green, $light-blue);
+
+  }
+}

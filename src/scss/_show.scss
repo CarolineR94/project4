@@ -1,0 +1,42 @@
+// show page
+.hero-image{
+  @extend .card-image;
+  height: 300px;
+}
+
+.show-page-article-content{
+  padding: 1em;
+}
+
+.show-button{
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  width: 50px;
+  height: 50px;
+  padding: 2%;
+  border-radius: 50px;
+  &.show-button:hover, .show-button.is-hovered{
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 693px){
+  ul.show-buttons{
+    display: flex;
+  }
+}
+
+.delete-icon{
+  background-color: red;
+  color: white;
+}
+
+.edit-icon{
+  background-color: $green;
+  color: $dark-grey;
+}
+
+.translate-icon{
+  background-color: $light-blue;
+}

@@ -1,0 +1,11 @@
+// mixins
+@mixin text-gradient($dir, $from, $to) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin background-gradient($dir, $from, $to) {
+  background-image:
+    -webkit-linear-gradient($dir, $from, $to),
+}
