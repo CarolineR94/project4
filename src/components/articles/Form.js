@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchBar from './SearchBar';
+
 
 const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
   const formInvalid = Object.keys(errors).some(key => errors[key]);
@@ -19,16 +21,7 @@ const ArticleForm = ({ handleChange, handleSubmit, article, errors }) => {
 
       <div className="field">
         <label htmlFor="language">Language</label>
-        <div className="control">
-          <div className="select">
-            <select id="language" name="language" onChange={handleChange} value={article.language || ''}>
-              <option>Please select</option>
-              <option value="en">en</option>
-              <option value="fr">fr</option>
-              <option value="it">it</option>
-            </select>
-          </div>
-        </div>
+        <SearchBar/>
         {errors.language && <small>{errors.language}</small>}
       </div>
 
