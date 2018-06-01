@@ -24,9 +24,9 @@ The site is a blogging platform with a multilingual twist. Users can post in a v
 
 
 ### The process:
-The first step was to consider the possible users of the app. The most likely market would be bilingual, as although it is a blogging platform, the USP is the possibility to 
+The first step was to consider the possible users of the app. The most likely market would be bilingual, as although it is a blogging platform, the USP is the possibility of translating blog posts.  
 
-There are a number of features which could be included in this type of app, but for the MVP I decided to focus on a basic product which would allow users to add, edit and delete articles and translations of those articles.
+There are a number of features which could be included in this type of app, but for the MVP I decided to focus on a basic product which would allow users to add, edit and delete posts and translations of those posts. The first step was to consider the personas and how they might interact with the site. As a result of this, I realised the site navigation needed to use as few words as possible, on the basis that some users wouldn't be English speakers. I also outlined the structure of my files and specified the 
 
 
 
