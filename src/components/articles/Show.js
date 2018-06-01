@@ -36,12 +36,11 @@ class ArticlesShow extends React.Component{
           <ul className="show-buttons">
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/translate`} className="button show-button translate-icon"><img src="../../assets/translate.svg"/></Link>
 
-            {console.log(Auth.getToken())}
-            {/* {currentUser === translation.author.username &&
+            {Auth.isCurrentUser(translation.author) &&
             <Link to={`/articles/${this.props.match.params.id}/${this.props.match.params.language}/edit`} className="button show-button edit-icon"><i className="fas fa-lg fa-edit"></i></Link>}
 
-            {currentUser === translation.author.username &&
-            <button onClick={this.handleDelete} className="button show-button delete-icon"><i className="far fa-lg fa-trash-alt"></i></button>} */}
+            {Auth.isCurrentUser(translation.author) &&
+            <button onClick={this.handleDelete} className="button show-button delete-icon"><i className="far fa-lg fa-trash-alt"></i></button>}
           </ul>}
 
           {/* <ul>

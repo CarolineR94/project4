@@ -16,9 +16,20 @@ select.is-rounded{
 
 
 // misc
+
 .not-found{
   font-family: 'Gentium Book Basic';
-  font-size: 60px;
+  font-size: 50px;
+  text-align: center;
+}
+
+img.not-found{
+  height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 5vh;
 }
 
 .input{
