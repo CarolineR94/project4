@@ -57,7 +57,7 @@ class ArticlesIndex extends React.Component{
 
                     {article.translatedInto.map(language =>
                       <Link className="button is-rounded index-language-button" key={language} to={`/articles/${article._id}/${language}`}>
-                        {language}
+                        {language}<i className="fa-xs fas fa-search"></i>
                       </Link>
                     )}
                   </div>
