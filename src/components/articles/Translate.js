@@ -11,8 +11,12 @@ class ArticlesTranslate extends React.Component {
   };
 
   componentDidMount(){
-    axios.get(`/api/articles/${this.props.match.params.id}/${this.props.match.params.language}`)
-      .then(res => this.setState({ translation: res.data }));
+    axios.get(`/api/articles/${this.props.match.params.id}`)
+      .then(res => {
+        const { language } = this.props.match.params;
+        const translation = res.data.translations.find(translation => translation.language === language);
+        this.setState({ translation });
+      });
   }
 
   handleChange = ({ target: { name, value } }) => {

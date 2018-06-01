@@ -33,7 +33,7 @@ class Auth {
 
   // Allows user to login
   static isCurrentUser(user){
-    return this.isAuthenticated() && user._id === this.getPayload().sub;
+    return user && this.isAuthenticated() && user._id === this.getPayload().sub;
   }
 }
 

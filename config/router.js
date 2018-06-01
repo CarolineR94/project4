@@ -9,8 +9,10 @@ router.route('/articles')
   .get(articles.index)
   .post(secureRoute, articles.create);
 
+router.route('/articles/:id')
+  .get(articles.show);
+
 router.route('/articles/:id/:language')
-  .get(articles.show)
   .put(secureRoute, articles.update)
   .delete(secureRoute, articles.delete);
 

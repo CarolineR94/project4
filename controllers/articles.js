@@ -14,14 +14,12 @@ function showRoute(req, res, next){
   Article
     .findById(req.params.id)
     .populate('translations.author')
-    .then(article => {
-      const translation = article.translations.find(translation => translation.language === req.params.language);
-      res.json(translation);
-    })
+    .then(article => res.json(article))
     .catch(next);
 }
 
 function createRoute(req, res, next){
+  req.body.translation[0].author = req.currentUser;
   Article
     .create(req.body)
     .then(article => res.status(201).json(article))
@@ -55,6 +53,7 @@ function deleteRoute(req, res, next){
 
 // translations
 function articleTranslateRoute(req, res, next){
+  req.body.author = req.currentUser;
   Article
     .findById(req.params.id)
     .exec()
