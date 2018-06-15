@@ -7,7 +7,6 @@ const translationsSchema = new mongoose.Schema({
   author: { type: mongoose.Schema.ObjectId, ref: 'User' },
   title: { type: String, required: 'This field is required' },
   tagline: { type: String, required: 'This field is required' },
-  // TODO: consider moving image field to the Article model
   image: { type: String, required: 'This field is required' },
   language: { type: String },
   content: { type: String, required: 'This field is required' }
